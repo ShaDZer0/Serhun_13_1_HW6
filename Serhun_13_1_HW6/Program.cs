@@ -106,7 +106,56 @@ namespace Serhun_13_1_HW6
                 printMatrix(matrix);
             }
             */
-            //Task 4
+            //Task 4 original
+            /* Написати програму в якій ви створите двовимірний масив розміром 4 на 4.
+            Заповнити його випадковими числами таким чином щоб у кожному рядку і 
+            стовпчику сума елементів дорівнювала числу 100.Вивести масив на екран. 
+            */
+            /*
+            {
+                int size = 4, sumX = 0;
+                int[] sumY = new int[size];
+                int[][] matrix = matrixAllMemory(size,size);
+                Random random = new Random();
+                while (true)
+                {
+                    for (int i = 0; i < size; i++)
+                    {
+                        sumX = 0;
+                        while (sumX != 100)
+                        {
+                            sumX = 0;
+                            for (int j = 0; j < size; j++)
+                            {
+                                matrix[i][j] = random.Next(0, 50);
+                                sumX += matrix[i][j];
+                            }
+                        }
+                    }
+                    for (int i = 0; i < size; i++)
+                    {
+                        for (int j = 0; j < size; j++)
+                        {
+                            sumY[i] += matrix[j][i];
+                        }
+                        if (sumY[i] != 100)
+                        {
+                            sumY[i] = 0;
+                            break;
+                        }
+                    }
+                    int sum = 0;
+                    for (int i = 0; i < size; i++)
+                    {
+                        sum += sumY[i];
+                    }
+                    if (sum == 400)
+                        break;
+                }
+                printMatrix(matrix);
+            }
+            */
+            //Task 4 changed
             /*
             try
             {
@@ -142,8 +191,6 @@ namespace Serhun_13_1_HW6
                 Console.WriteLine(ex.Message);
             }
             */
-
-
         }
     }
 }
