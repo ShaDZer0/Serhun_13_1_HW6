@@ -127,8 +127,13 @@ namespace Serhun_13_1_HW6
                             sumX = 0;
                             for (int j = 0; j < size; j++)
                             {
-                                matrix[i][j] = random.Next(0, 50);
+                                matrix[i][j] = random.Next(0, 51);
                                 sumX += matrix[i][j];
+                                if (sumX > 100)
+                                {
+                                    sumX = 0;
+                                    break;
+                                }
                             }
                         }
                     }
@@ -191,6 +196,7 @@ namespace Serhun_13_1_HW6
                 Console.WriteLine(ex.Message);
             }
             */
+            
         }
     }
 }
